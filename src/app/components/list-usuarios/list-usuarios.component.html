@@ -1,0 +1,39 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <span class="h3">Listado de Usuarios</span>
+            <button class="btn btn-dark btn-lg float-end" routerLink="/create-usuarios">Agregar 
+              <i class="fas fa-user-plus"></i>
+            </button>
+            <table *ngIf="usuarios.length>0" class="table  table-striped mt-2">
+              <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Salario</th>
+                    <th scope="col">Documento</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let usuario of usuarios">
+                    <td>{{usuario.nombre}}</td>
+                    <td>{{usuario.apellido}}</td>
+                    <td>{{usuario.salario | currency}}</td>
+                    <td>{{usuario.documento}}</td>
+                    <td>
+                      <i class="fas fa-edit fa-lg text-info me-4" [routerLink]="['/editUsuario/',usuario.id]"></i>
+                      <i (click)="eliminarUsuario(usuario.id)" class="fas fa-trash fa-lg text-danger"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div *ngIf="usuarios.length == 0" class="text-center mt-4">
+                <img class="w-50 m-auto" src="../../../assets/user.svg" alt="">
+                <div class="alert alert-warning mt-5" role="alert">
+                  <strong >Ups..!,  No hay usuarios registrados</strong>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
