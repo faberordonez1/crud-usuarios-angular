@@ -26,7 +26,7 @@ export class CreateUsuariosComponent implements OnInit {
         nombre:["",Validators.required],
         apellido:["",Validators.required],
         documento:["",Validators.required],
-        salario:["",Validators.required]
+        direccion:["",Validators.required]
       })
       this.id= this.aRoute.snapshot.paramMap.get('id');//captura id de url
         //console.log(this.id);
@@ -56,7 +56,7 @@ export class CreateUsuariosComponent implements OnInit {
       nombre:this.createUsuario.value.nombre,
       apellido:this.createUsuario.value.apellido,
       documento:this.createUsuario.value.documento,
-      salario:this.createUsuario.value.salario,
+      direccion:this.createUsuario.value.direccion,
       fechaCreacion:new Date(),
       fechaActualización:new Date()
     }
@@ -77,7 +77,7 @@ export class CreateUsuariosComponent implements OnInit {
       nombre:this.createUsuario.value.nombre,
       apellido:this.createUsuario.value.apellido,
       documento:this.createUsuario.value.documento,
-      salario:this.createUsuario.value.salario,
+      direccion:this.createUsuario.value.direccion,
       fechaActualización:new Date()
     }
 
@@ -103,7 +103,7 @@ export class CreateUsuariosComponent implements OnInit {
               nombre:data.payload.data()["nombre"],
               apellido:data.payload.data()["apellido"],
               documento:data.payload.data()["documento"],
-              salario:data.payload.data()["salario"],
+              direccion:data.payload.data()["direccion"],
             })
         })
     }
