@@ -10,8 +10,8 @@
                   <tr>
                     <th scope="col">Nombre</th>
                     <th scope="col">Apellido</th>
-                    <th scope="col">Salario</th>
                     <th scope="col">Documento</th>
+                    <th scope="col">Direccion</th>
                     <th scope="col">Acciones</th>
                   </tr>
                 </thead>
@@ -19,8 +19,8 @@
                   <tr *ngFor="let usuario of usuarios">
                     <td>{{usuario.nombre}}</td>
                     <td>{{usuario.apellido}}</td>
-                    <td>{{usuario.salario | currency}}</td>
                     <td>{{usuario.documento}}</td>
+                    <td>{{usuario.direccion}}</td>
                     <td>
                       <i class="fas fa-edit fa-lg text-info me-4" [routerLink]="['/editUsuario/',usuario.id]"></i>
                       <i (click)="eliminarUsuario(usuario.id)" class="fas fa-trash fa-lg text-danger"></i>
