@@ -21,6 +21,6 @@ service cloud.firestore {
 }
 
 ```
-
--  [Url App Desplegada](https://faber-user.vercel.app/list-usuarios)
+- [Repo Clone (Desplegdo en vercel)](https://github.com/faberordonez1/Angular-crud-vercel)
+- [Url Vercel](https://faber-user.vercel.app/list-usuarios)
 
